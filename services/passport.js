@@ -41,8 +41,16 @@ passport.use(new FacebookStrategy({
         callbackURL: '/auth/facebook/callback',
         proxy: true
     }, (accessToken, refreshToken, profile, cb) => {
-        console.log(accessToken, refreshToken, profile,);
-    }
-));
+    User.findOne({ facebookId: profile.id })
+        .then((user) => {
+            if(user) {
+                done(null, user);
+            }else {
+                new User({ facebookId: profile.id })
+                    .save()
+                    .then(user => done(null, user));
+            }
+        });
+}));
 
 

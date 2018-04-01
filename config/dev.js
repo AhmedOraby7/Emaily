@@ -4,8 +4,7 @@ module.exports = {
     googleClientSecret: "jmf7FU7nqR7ciftUIga-J2ch",
     facebookClientID: "2068754630114616",
     facebookClientSecret: "0fff52b4439a1c9028725838f02cfa7e",
-    mongoClient: "mongodb://localhost:27017/Emaily-prod",
+    mongoClient: "mongodb://localhost:27017/Emaily",
     cookieKey: "jkhkjashdjkasdkjahdkjahuehjashflashjkashfkjlahsdjl"
 };
 
-// mongodb://eamily-prod:password123@ds131329.mlab.com:31329/emaily-prod

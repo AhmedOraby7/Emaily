@@ -5,6 +5,8 @@ module.exports = {
     facebookClientID: "2068754630114616",
     facebookClientSecret: "0fff52b4439a1c9028725838f02cfa7e",
     mongoClient: "mongodb://localhost:27017/Emaily",
-    cookieKey: "jkhkjashdjkasdkjahdkjahuehjashflashjkashfkjlahsdjl"
+    cookieKey: "jkhkjashdjkasdkjahdkjahuehjashflashjkashfkjlahsdjl",
+    stripePublishableKey: "pk_test_uwAWMQkp1wSkx8mnvJQ7p2tw",
+    stripeSecretKey: "sk_test_cKbLYZPNtM9dX1Y3evqR78mS"
 };
 

@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 
 require('./models/User');
+require('./models/Surveys');
 require('./services/passport');
 
 
@@ -28,18 +29,22 @@ app.use(
         keys: [keys.cookieKey]
     })
 );
+
+
 // Telling passport to use cookie inside our application
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
+
+// This for Heroku
 if(process.env.NODE_ENV === 'production'){
     // Express will serve up production asserts
     app.use(express.static('client/build'));
-
-
     // Express will server up the index.html file
     //   if it does not recognize the route
     const path = require('path');
